@@ -1,0 +1,21 @@
+<div class="background">
+  <br><br>
+  <div class="title2">
+    ログイン
+  </div>  
+
+  <div class= "container">
+    <div class="row">
+      <div class= "col-md-offset-5">
+        <%= form_for :session,url: login_path do |f| %>
+          <%= f.label "名前",class:"white" %><br>
+          <%= f.text_field :name %><br><br>
+          <%= f.label "パスワード",class:"white" %><br>
+          <%= f.text_field :password %><br><br>
+          <%= f.submit "Login",class:"btn-white" %>
+        <% end %>  
+      </div>
+    </div>
+  </div>
+  
+</div>  

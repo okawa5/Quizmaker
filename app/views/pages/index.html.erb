@@ -1,0 +1,22 @@
+<div class="background text-center">
+ 
+  <div class="title">
+    QuizMaker
+  </div>
+
+        <div class=btnA>
+          <%= link_to image_tag('sinkitouroku.png'), users_new_path %>
+          
+      <% if logged_in? %>
+        <%= link_to image_tag('logout.png'), logout_path %>    
+        
+        </div>
+        <div class=btnB>
+          <%= link_to image_tag('toukou.png'), topics_new_path %>
+          <%= link_to image_tag('eturan.png'), topics_index_path %>
+        </div>
+      <% else %>
+        <%= link_to image_tag('login.png'), login_path %>
+      <% end %>
+
+</div>  

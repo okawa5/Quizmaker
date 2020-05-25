@@ -1,0 +1,24 @@
+<div class="background3 text-center">
+
+      <% @topics.each do |a| %>
+        <br>
+          <div class="box1">
+              投稿者名：<%=a.user.name %><br>
+              問題：<%=a.question %><br><br>
+              １:<%=a.choice1 %><br>
+              ２:<%=a.choice2 %><br>
+              ３:<%=a.choice3 %><br>
+              ４:<%=a.choice4 %><br>
+    
+  
+          <%= link_to checks_new_path(topic_id: a.id,question: a.question,choice1: a.choice1,choice2: a.choice2,choice3: a.choice3,choice4: a.choice4,answer123456789123456789123456789123456789123456789123456789123456789123456789: a.answer,explanation: a.explanation), method: :post do %>
+            <%= image_tag 'toku3.png' %>
+          <% end %>
+  
+          <br>  
+          </div>
+      <% end %>
+
+        <br><br><br><br><br>
+        <%= link_to "トップへ戻る" , root_path %>
+</div>

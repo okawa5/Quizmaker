@@ -1,0 +1,23 @@
+<div class="text-center">
+
+      <% if  params[:your_answer]==params[:answer] %>
+        <h1>正解！！！！</h1>
+      <% else %>
+        <h1>不正解！！！</h1>
+      <% end %>
+
+      <br>
+      １：<%= params[:choice1] %><br>
+      ２：<%= params[:choice2] %><br>
+      ３：<%= params[:choice3] %><br>
+      ４：<%= params[:choice4] %><br>
+
+      <br>正解は・・・「<%= params[:answer] %>」
+      <br><br>
+      解説<br>
+      <%= params[:explanation] %>
+
+      <br><br>
+      <%=link_to "問題一覧へ",topics_index_path %>
+
+</div>

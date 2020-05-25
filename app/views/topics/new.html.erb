@@ -1,0 +1,50 @@
+<div class= "background2">
+  <div class="title2">
+   問題作成
+  </div>
+
+  <div class= "container">
+    <div class="row">
+      <div class= "col-md-offset-5">
+        <%= form_for @topic,url: topics_new_path do |f| %>
+          <%= f.label "問題文（１００文字以内）",class:"white"%><br>
+          <%= f.text_area  :question %><br><br><br>
+        
+          <%= f.label "選択肢１（１０文字以内）",class:"white" %><br>
+          <%= f.text_field  :choice1 %><br><br><br>
+        
+          <%= f.label "選択肢２（１０文字以内）",class:"white" %><br>
+          <%= f.text_field  :choice2 %><br><br><br>
+        
+          <%= f.label "選択肢３（１０文字以内）",class:"white" %><br>
+          <%= f.text_field  :choice3 %><br><br><br>
+        
+          <%= f.label "選択肢４（１０文字以内）",class:"white" %><br>
+          <%= f.text_field  :choice4 %><br><br><br>
+          
+           <div class="white">
+            <b>正解の番号</b><br>
+           </div>
+            <%= f.label "1",class:"white" %>
+            <%= f.radio_button :answer, 1 %><br>
+        
+            <%= f.label "2",class:"white" %>
+            <%= f.radio_button :answer, 2 %><br>
+        
+            <%= f.label "3",class:"white" %>
+            <%= f.radio_button :answer, 3 %><br>
+        
+            <%= f.label "4",class:"white" %>
+            <%= f.radio_button :answer, 4 %><br><br><br>
+          
+        
+          <%= f.label "解説文（１００文字以内）",class:"white" %><br>
+          <%= f.text_area  :explanation %><br><br><br>
+      
+          <%=f.submit "投稿",class:"btn-black" %><br><br><br><br>
+        <% end %>  
+      
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="background">
+  <br><br>
+
+    <div class="title2">
+      新規登録
+    </div>
+  
+     <div class="container">
+        <div class="row">
+          <div class=col-md-offset-5>  
+            <%= form_for @user,url: users_new_path do |f| %>
+                <%=f.label "名前(１０文字以内)",class:"white" %><br>
+                <%=f.text_field :name %><br><br>
+              
+                <%=f.label "パスワード",class:"white" %><br>
+                <%=f.password_field :password %><br><br>
+                <%=f.label "パスワード（確認）",class:"white" %><br>
+                <%=f.password_field :password_confirmation %>
+                
+                <br><br><%= f.submit "登録", class: 'btn-white' %>            
+              
+                
+            <% end %>
+          </div>
+  
+        </div>
+     </diV>
+</div>
