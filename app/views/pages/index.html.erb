@@ -1,4 +1,4 @@
-<div class="background text-center">
+<div class="background2 text-center">
  
   <div class="title">
     QuizMaker
@@ -20,3 +20,11 @@
       <% end %>
 
 </div>  
+
+<%if logged_in? %>
+  <%= link_to("マイページ", "/pages/#{current_user.id}/mypage") %><br>
+<% end %>
+
+<%= link_to("おつかい",games_new_path) %>
+
+

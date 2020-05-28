@@ -1,0 +1,24 @@
+<%= form_tag("/topics/#{@topic.id}/update") do %>
+ <form>
+  <div class="form-group">
+   <label for="編集">編集する</label><br>
+   問題文（１００文字以内）<br>
+   <textarea name="question" class="form-control"><%= @topic.question %></textarea><br>
+   選択肢１（１０文字以内）<br>
+   <textarea name="choice1" class="form-control"><%= @topic.choice1 %></textarea><br>
+   選択肢２（１０文字以内）<br>
+   <textarea name="choice2" class="form-control"><%= @topic.choice2 %></textarea><br>
+   選択肢３（１０文字以内）<br>
+   <textarea name="choice3" class="form-control"><%= @topic.choice3 %></textarea><br>
+   選択肢４（１０文字以内）<br>
+   <textarea name="choice4" class="form-control"><%= @topic.choice4 %></textarea><br>
+   
+    正解の番号(1,2,3,4のどれか)<br>
+    <input type="number" name="answer" min="1" max="4" step="1"><br><br>
+   
+   解説文（１００文字以内）<br>
+   <textarea name="explanation" class="form-control"><%= @topic.explanation %></textarea>
+
+  </div><!--form-group-->
+  <button type="submit" class="btn btn-primary">保存</button>
+<% end %>

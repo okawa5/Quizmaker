@@ -12,8 +12,6 @@ class CreateTopics < ActiveRecord::Migration[5.2]
       t.integer :answer
       t.string :explanation
 
-      t.integer :your_answer
-
 
       t.timestamps
     end

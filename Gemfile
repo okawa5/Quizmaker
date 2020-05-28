@@ -74,3 +74,8 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 
 gem 'bcrypt'
+
+gem'kaminari', '~> 0.17.0'
+
+gem "chartkick"
+gem 'chartable'

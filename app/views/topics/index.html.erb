@@ -1,9 +1,13 @@
-<div class="background3 text-center">
-
+<div class="background text-center">
       <% @topics.each do |a| %>
         <br>
           <div class="box1">
               投稿者名：<%=a.user.name %><br>
+              <% if a.user_id==current_user.id %>
+                <%= link_to("編集", "/topics/#{a.id}/edit") %><br>
+                <%= link_to("削除", "/topics/#{a.id}/destroy",{method: "post"})  %><br>
+              <% end %>
+              
               問題：<%=a.question %><br><br>
               １:<%=a.choice1 %><br>
               ２:<%=a.choice2 %><br>
@@ -17,8 +21,10 @@
   
           <br>  
           </div>
+      
+        
       <% end %>
-
+      <%= paginate @topics %>
         <br><br><br><br><br>
         <%= link_to "トップへ戻る" , root_path %>
 </div>

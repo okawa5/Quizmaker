@@ -48,7 +48,7 @@
 
 .background{
   width: 100vw;
-  height: 100vh;
+  height: 180vh;
   background-image: url('sabaku.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -59,6 +59,8 @@
 }
 
 .background2{
+  width: 100vw;
+  height: 100vh;
   background-image: url('sabaku.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -68,15 +70,7 @@
 
 }
 
-.background3{
-  background-image: url('sabaku.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
 
-}
 
 .white{
   color:#FFFFFF;
@@ -121,12 +115,25 @@
 .box2 {
     width:500px;
     border: solid 3px #000000;
-    padding-top:50px;
-    padding-bottom:50px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:50px;
 }
 
 
 .timer{
   margin-left:78px;
   zoom:7
+}
+
+
+.text1 {
+  font-size:30px;
+  
+}
+
+
+.mypage{
+  font-size:30px;
+  
 }

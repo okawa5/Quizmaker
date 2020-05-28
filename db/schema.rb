@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_18_014708) do
+ActiveRecord::Schema.define(version: 2020_05_28_144627) do
 
-  create_table "checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "topic_id"
+  create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "one", default: 10
+    t.integer "two", default: 20
+    t.integer "three", default: 30
+    t.integer "four", default: 40
+    t.integer "five", default: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,6 +37,8 @@ ActiveRecord::Schema.define(version: 2020_05_18_014708) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.integer "all_answer", default: 0
+    t.integer "correct_answer", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"

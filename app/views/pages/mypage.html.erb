@@ -1,0 +1,12 @@
+<div class="mypage">
+    名前:<%= @mypage.name %><br>
+    総回答数:<%= @mypage.all_answer%>問<br>
+    正解数:<%= @mypage.correct_answer %>問<br>
+    正答率:<%= @mypage.correct_answer.to_f/ @mypage.all_answer.to_f*100 %>%
+
+   
+</div>
+
+ <%= pie_chart @chart %>
+ 
+ <%= link_to "トップへ戻る",root_path %>
