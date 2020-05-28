@@ -30,7 +30,11 @@ Rails.application.routes.draw do
   post "checks/answer" => "checks#answer"
   
   get"games/new"
-  get"games/cake"
+  get"games/cake1"
+  get"games/cake2"
+  get"games/cake3"
+  get"games/cake4"
+  get"games/ok"
 
 end
 
