@@ -79,7 +79,7 @@ gem 'bootstrap-sass'
 
 gem 'bcrypt'
 
-gem'kaminari', '~> 0.17.0'
+gem'kaminari', '~> 1.2.1'
 
 gem "chartkick"
 gem 'chartable'
