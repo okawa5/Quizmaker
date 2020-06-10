@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'users/new'
   root "pages#index"
   get "pages/:id/mypage"=>"pages#mypage"
+
+  get "topics/search"
   
   post "users/new" => "users#create"
 
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
 
   post "topics/new" => "topics#create"
   get "topics/index"
+  get "topics/index2"
   get "topics/answer"
   get "topics/:id/edit" => "topics#edit"
   post "topics/:id/update" => "topics#update"
@@ -29,12 +32,22 @@ Rails.application.routes.draw do
   post "checks/new"  => "checks#new"
   post "checks/answer" => "checks#answer"
   
-  get"games/new"
-  get"games/cake1"
-  get"games/cake2"
-  get"games/cake3"
-  get"games/cake4"
-  get"games/ok"
+
+  
+  get"games/zyanken"
+  post"games/zyanken"=>"games#zyankenA"
+  post"games/zyankenA"=>"games#zyankenA"
+  get"games/zyankenA"
+ 
+
+
+  
+
+
+
 
 end
+
+
+
 

@@ -1,3 +1,7 @@
+* {   
+    margin: 0px;
+    padding: 0px;
+}
 
 
 .title {
@@ -18,11 +22,12 @@
 }
 
 .btnA {
-  margin: 10px 10px ;
+ 
+ 
 }
 
 .btnB {
-  margin: 10px 10px;
+  
 }
 
 .test {
@@ -47,8 +52,20 @@
 }
 
 .background{
-  width: 100vw;
-  height: 180vh;
+  width:100vw;
+  height:200vh;
+  background-image: url('sabaku.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+}
+
+.background3{
+  width:100vw;
+  height:100vh;
   background-image: url('sabaku.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -60,7 +77,19 @@
 
 .background2{
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
+  background-image: url('sabaku.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+}
+
+.background4{
+  width: 100vw;
+  height: 200vh;
   background-image: url('sabaku.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -71,9 +100,8 @@
 }
 
 
-
 .white{
-  color:#FFFFFF;
+  color:#ffffff;
 }
 
 .btn-white {
@@ -106,9 +134,9 @@
     width:500px;
     margin-left:500px;
     font-weight: bold;
-    border: solid 3px #6091d3;
+    border: solid 3px #f0f8ff;
     border-radius: 20px;
-    background: #cde4ff;
+    background: #fffacd;
   
 }
 
@@ -118,12 +146,34 @@
     padding-top:10px;
     padding-bottom:10px;
     font-size:50px;
+    background: #ffffff;
+  
 }
+
+.box3 {
+    margin-left:500px;
+    width:500px;
+    border: solid 10px #000000;
+    font-size:50px;
+    background:#ffffff;
+}
+
+.box4 {
+    width:500px;
+    margin-left:500px;
+    font-weight: bold;
+    border: solid 3px #f0f8ff;
+    border-radius: 20px;
+    background: #fffacd;
+  
+}
+  
+
+
 
 
 .timer{
-  margin-left:78px;
-  zoom:7
+  zoom:6
 }
 
 
@@ -136,4 +186,10 @@
 .mypage{
   font-size:30px;
   
+}
+
+
+.question{
+  font-size:30px;
+  color:#ffffff;
 }

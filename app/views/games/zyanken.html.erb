@@ -1,0 +1,16 @@
+<h1>じゃ～～～んけん！！</h1>
+
+ <%= image_tag "zyanken",:size=>"400x200" %><br><br>
+
+ <%= link_to games_zyankenA_path(your_hand: 1), method: :post do %>
+              <%= image_tag 'janken_gu',:size => '100x100' %>
+ <% end %>
+    
+ <%= link_to games_zyankenA_path(your_hand: 2), method: :post do %>
+              <%= image_tag 'janken_choki',:size => '100x100' %>
+ <% end %>
+
+ <%= link_to games_zyankenA_path(your_hand: 3), method: :post do %>
+              <%= image_tag 'janken_pa',:size => '100x100' %>
+ <% end %>
+ 

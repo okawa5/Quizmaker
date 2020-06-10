@@ -1,9 +1,9 @@
-<div class="text1 text-center">
-
+<div class="background4 text-center">
+    <div class ="box3">
       <% if  params[:your_answer]==params[:answer] %>
-        <h1>正解！！！！</h1>
+        正解！！！！
       <% else %>
-        <h1>不正解！！！</h1>
+        不正解！！！
       <% end %>
 
       <br>
@@ -19,5 +19,5 @@
 
       <br><br>
       <%=link_to "問題一覧へ",topics_index_path %>
-
+    </div>
 </div>

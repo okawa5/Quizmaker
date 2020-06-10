@@ -1,4 +1,4 @@
-<div class="background2 text-center">
+<div class="background3 text-center">
  
   <div class="title">
     QuizMaker
@@ -8,7 +8,8 @@
           <%= link_to image_tag('sinkitouroku.png'), users_new_path %>
           
       <% if logged_in? %>
-        <%= link_to image_tag('logout.png'), logout_path %>    
+      
+          <%= link_to image_tag('logout.png'), logout_path %>    
         
         </div>
         <div class=btnB>
@@ -18,13 +19,17 @@
       <% else %>
         <%= link_to image_tag('login.png'), login_path %>
       <% end %>
-
+      
+      <br><%= link_to("じゃんけん",games_zyanken_path) %>
+      <%if logged_in? %>
+          <%= link_to("マイページ", "/pages/#{current_user.id}/mypage") %><br>
+      <% end %>
 </div>  
 
-<%if logged_in? %>
-  <%= link_to("マイページ", "/pages/#{current_user.id}/mypage") %><br>
-<% end %>
 
-<%= link_to("おつかい",games_new_path) %>
+
+
+
+
 
 

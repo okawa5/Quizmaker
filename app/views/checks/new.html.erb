@@ -1,9 +1,11 @@
 <body onLoad="disp()">
 
-    <div class="text-center">
-            問題<br><br>
+    <div class="background4 text-center">
+            <div class="question">
+              問題<br><br>
     
-            <%= params[:question] %><br><br>
+              <%= params[:question] %><br><br>
+            </div>
             <div class="box2 col-md-offset-4"> 
                       １：<%= params[:choice1] %>
             </div>
@@ -19,9 +21,9 @@
             </div>
     
     
-             <%= link_to checks_answer_path(question:  params[:question],your_answer: 1,choice1: params[:choice1],choice2: params[:choice2],choice3: params[:choice3],choice4: params[:choice4],answer: params[:answer123456789123456789123456789123456789123456789123456789123456789123456789],explanation: params[:explanation],), method: :post do %>
+            <%= link_to checks_answer_path(question:  params[:question],your_answer: 1,choice1: params[:choice1],choice2: params[:choice2],choice3: params[:choice3],choice4: params[:choice4],answer: params[:answer123456789123456789123456789123456789123456789123456789123456789123456789],explanation: params[:explanation],), method: :post do %>
               <%= image_tag 'number1.png',class: "mgr" %>
-          　  <% end %>
+            <% end %>
     
             <%= link_to checks_answer_path(question:  params[:question],your_answer: 2,choice1: params[:choice1],choice2: params[:choice2],choice3: params[:choice3],choice4: params[:choice4],answer: params[:answer123456789123456789123456789123456789123456789123456789123456789123456789],explanation: params[:explanation],), method: :post do %>
               <%= image_tag 'number2.png',class: "mgr" %>
@@ -34,12 +36,15 @@
             <%= link_to checks_answer_path(question:  params[:question],your_answer: 4,choice1: params[:choice1],choice2: params[:choice2],choice3: params[:choice3],choice4: params[:choice4],answer: params[:answer123456789123456789123456789123456789123456789123456789123456789123456789],explanation: params[:explanation],), method: :post do %>
               <%= image_tag 'number4.png',class:"mgr" %>
             <% end %>
+
+
+            <div class="timer">
+                  <form action="#" name="form1">
+                  <input type="text" name="field1" size="4"> <br>
+            </div>  
     
     </div>
   
-    <div class="timer">
-      <form action="#" name="form1">
-      <input type="text" name="field1" size="4"> <br>
-    </div>  
+
 
 </body>

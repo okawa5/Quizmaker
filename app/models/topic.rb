@@ -8,8 +8,24 @@ class Topic < ApplicationRecord
   validates :explanation,length: {in:1..100}
   validates :answer,presence: true
 
-  default_scope -> { order(created_at: :desc) }
 
   belongs_to :user
+
+  acts_as_taggable
+
+
+
+
+
+  def self.search(search)
+    if search
+      Topic.where(["question LIKE ?","%#{search}%"])
+    else
+      Topic.all
+    end  
+  end  
+
+    
+
 
 end

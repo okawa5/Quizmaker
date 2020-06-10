@@ -1,8 +1,14 @@
 class TopicsController < ApplicationController
   def index
-    @topics=Topic.page(params[:page]).per(5)
-    
+    @topics=Topic.order("id DESC").page(params[:page]).per(5)
+    @now=request.path_info
   end  
+  
+  def index2
+    @topics=Topic.order("id ASC").page(params[:page]).per(5)
+    @now=request.path_info
+    render :index
+  end
   
   def new
     @topic=Topic.new
@@ -44,7 +50,10 @@ class TopicsController < ApplicationController
   
 
   
-  
+  def search
+    @topic=Topic.search(params[:search])
+    @topic=Topic.order("id DESC").page(params[:page]).per(1)
+  end  
   
   
 

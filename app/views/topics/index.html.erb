@@ -1,4 +1,11 @@
-<div class="background text-center">
+<div class="background2 text-center">
+
+    <% if @now==topics_index_path %>
+      <%= link_to "古い順に表示する　", topics_index2_path,style: 'color:#FFFFFF;' %>
+    <% elsif @now==topics_index2_path %>
+      <%= link_to "新しい順に表示する　", topics_index_path,style: 'color:#FFFFFF;' %>
+    <% end %>  
+      
       <% @topics.each do |a| %>
         <br>
           <div class="box1">
@@ -24,7 +31,24 @@
       
         
       <% end %>
-      <%= paginate @topics %>
-        <br><br><br><br><br>
-        <%= link_to "トップへ戻る" , root_path %>
+        
+ 
+      
+      <div class="box1">
+        <%= paginate @topics %>
+      </div>
+     
+        <%= form_tag(topics_search_path,:method => "get") do %>
+          <%= text_field_tag :search %>
+          <%= submit_tag "検索",:name =>nil %>
+        <% end %>  
+ 
+        <br><br>
+      <%= link_to "トップへ戻る　　", root_path,style: 'color:#FFFFFF;' %>
+        
+        
+
+
+     
+
 </div>

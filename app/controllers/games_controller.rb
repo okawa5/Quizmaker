@@ -1,43 +1,44 @@
 class GamesController < ApplicationController
 
-  def cake1
-    cake=Game.find_by(params[:one])
-    cake.one+=10
-    cake.save
-    redirect_to games_new_path
-  end  
+  def zyanken
+  end
+   
+  def zyankenA
+    @hand=rand(1..3)
+    
+    if params[:your_hand].to_i==@hand
+      @kekka="あいこ！！"
+    elsif params[:your_hand].to_i==1 && @hand==2
+      @kekka="You Win!!"
+    elsif params[:your_hand].to_i==1 && @hand==3
+      @kekka="You Lose!!"
+    elsif params[:your_hand].to_i==2 && @hand==3
+      @kekka="You Win!!"
+    elsif params[:your_hand].to_i==2 && @hand==1
+      @kekka="You Lose!!"
+    elsif params[:your_hand].to_i==3 && @hand==1
+      @kekka="You Win!!"
+    elsif params[:your_hand].to_i==3 && @hand==2
+      @kekka="You Lose!!"
+    end  
   
-  def cake2
-    cake=Game.find_by(params[:one])
-    cake.one-=10
-    cake.save
-    redirect_to games_new_path
-  end  
-  
-  def cake3
-    cake=Game.find_by(params[:two])
-    cake.two+=10
-    cake.save
-    redirect_to games_new_path
-  end  
-  
-  def cake4
-    cake=Game.find_by(params[:two])
-    cake.two-=10
-    cake.save
-    redirect_to games_new_path
-  end  
-  
-  def new
-    cake=Game.find_by(params[:one])
-    @chart = {"青" =>cake.one, "赤" => cake.two, "黄色"=> cake.three, "緑" => cake.four,"紫"=>cake.five}
-    if cake.one==80 && cake.two==80
-      cake.one=10
-      cake.two=20
-      cake.save
-      redirect_to games_ok_path
+    if @hand==1
+        @aitenote="グー"
+    elsif @hand==2
+      @aitenote="チョキ"
+    elsif @hand==3
+      @aitenote="パー"
     end
+    
+    if params[:your_hand].to_i==1
+        @anatanote="グー"
+    elsif params[:your_hand].to_i==2
+      @anatanote="チョキ"
+    elsif params[:your_hand].to_i==3
+      @anatanote="パー"
+    end   
 
 
   end
-end
+end  
+  

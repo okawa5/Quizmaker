@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: quizmaker2_production
-  username: quizmaker2
-  password: <%= ENV['QUIZMAKER2_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

@@ -1,0 +1,32 @@
+<div class="background text-center">    
+    
+      <% @topic.each do |a| %>
+         <div class="box4">
+              投稿者名：<%=a.user.name %><br>
+              <% if a.user_id==current_user.id %>
+                <%= link_to("編集", "/topics/#{a.id}/edit") %><br>
+                <%= link_to("削除", "/topics/#{a.id}/destroy",{method: "post"})  %><br>
+              <% end %>
+              
+              問題：<%=a.question %><br><br>
+              １:<%=a.choice1 %><br>
+              ２:<%=a.choice2 %><br>
+              ３:<%=a.choice3 %><br>
+              ４:<%=a.choice4 %><br>
+    
+  
+          <%= link_to checks_new_path(topic_id: a.id,question: a.question,choice1: a.choice1,choice2: a.choice2,choice3: a.choice3,choice4: a.choice4,answer123456789123456789123456789123456789123456789123456789123456789123456789: a.answer,explanation: a.explanation), method: :post do %>
+            <%= image_tag 'toku3.png' %>
+          <% end %>
+
+      <% end %>
+         </div>
+        <br><br><br>
+      <div class="box1">
+        <%= paginate @topic %>
+      </div>
+ 
+      <%= link_to "トップへ戻る　　", root_path,style: 'color:#FFFFFF;' %>
+  
+</div>      
+      
